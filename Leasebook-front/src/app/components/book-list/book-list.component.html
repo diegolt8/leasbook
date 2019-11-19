@@ -1,15 +1,64 @@
-
-<div class="row">
-    <div class="col-md-4 p-4" *ngFor="let book of books">
-        <div class="card card-book" (click)="selectedCard(book._id)">
-            <div class="card-header">
-                <label><b>Libro:</b> {{book.name}}</label>
-                <img [src]="'http://localhost:3000/' + book.add_photo" class="img-card-top w-100">
+<app-header></app-header>
+<div class="container">
+    <div class="row center-xs">
+        <div class="contenedor">
+            <figure class="col-xs-12">
+                <img src="../assets/fondo1.jpg" width="1350" height="550" />
+            </figure>
+            <h1>
+                <div class="centrado"><a>ADQUIERE UN LIBRO</a></div>
+            </h1>
+            <h4>
+                <div class="sub">ADQUIRIR UN LIBRO AHORA, UNA FORMA FÁCIL DE PODER POTENCIAR TU HOBBY</div>
+            </h4>
+            <h5>
+                <div class="sub2">Arrienda, adquiere y disfruta de tus libros favoritos, donde el bibliotecario eres tú
+                </div>
+            </h5>
+        </div>
+    </div>
+    <div class="sub3">
+        <h2>PUBLICA TÚ LIBRO QUE YA NO USES</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-4 p-4" *ngFor="let book of books">
+            <div class="card card-book" (click)="selectedCard(book._id)">
+                <div class="card-header">
+                    <label><b>Libro:</b> {{book.name}}</label>
+                    <img [src]="'http://localhost:3000/' + book.add_photo" class="img-card-top w-100">
+                </div>
+                <div class="card-body">
+                    <label><b>Autor:</b> {{book.autor}}</label>
+                    <br>
+                    <label><b>Descripción:</b> {{book.description}}</label>
+                </div>
             </div>
-            <div class="card-body">
-                <label><b>Autor:</b> {{book.autor}}</label>
-                <br>
-                <label><b>Descripción:</b> {{book.description}}</label>
+        </div>
+    </div>
+    <br>
+    <h2>
+        <div class="contenedorBene">
+            <span>BENEFICIOS</span>
+        </div>
+    </h2>
+    <div class="containerBene">
+        <div class="row">
+            <div class="col-sm">
+                <img class="foto" src="../assets/lectura.png" />
+                <h5>Lectura cómoda y sin realizar esfuerzos</h5>
+            </div>
+            <div class="col-sm">
+                <img class="foto" src="../assets/lupa.png" width="200" height="200" />
+                <h5>Buscar el libro que necesitas de una forma más facil y en solo lugar</h5>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-sm">
+                <img class="foto" src="../assets/bene1.png" width="270" height="200" />
+                <h5>Adqurir libros de forma facil y en buenas condiciones</h5>
+            </div>
+            <div class="col-sm">
+                <img class="foto" src="../assets/grupoLec.jpg" width="270" height="200" />
+                <h5>Poder crear una comunidad de lectores y grupos de lectura</h5>
             </div>
         </div>
     </div>

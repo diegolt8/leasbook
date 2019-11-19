@@ -5,3 +5,71 @@
 .card-book:hover {
     border: 1px solid blue;
 }
+
+h1{
+    color:black ;
+    font-weight: 700;
+    padding: 1em 0;
+}
+
+.centrado{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    
+}
+
+.contenedorSub{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub2{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -900%);
+}
+
+.sub3{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+
+
+.caro{
+   padding: 3%;
+   width: 100;
+   height: 100;
+}
+
+
+section article:hover{
+    opacity: 0.3;
+    transition-duration: 0.5s;
+    
+}
+
+
+.contenedorBene{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+.containerBene{
+    padding:3%;
+}

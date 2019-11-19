@@ -48,10 +48,9 @@
                 <h2 style="color: white; text-align: justify;">Publicar Libro</h2>
               </div>
               <div class="card-body">  
-                <form>
-                    
+                <form (submit)="register(name, description, synopsis, publication_date, autor, editorial, genre)">
                      <div class="form-group">
-                            <label for="nombre" style="color: white;">Nombre:</label>
+                            <label for="nombre" style="color: rgb(112, 112, 112);">Nombre:</label>
                         <input type="text" class="form-control" placeholder="Nombre del libro" required #name>
                     </div>
                     <div class="form-group">

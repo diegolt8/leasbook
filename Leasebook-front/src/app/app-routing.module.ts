@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookListComponent } from './components/book-list/book-list.component'
 import { BookFormComponent } from './components/book-form/book-form.component';
 import { BookPreviewComponent } from './components/book-preview/book-preview.component';
-import {HomeComponent} from './components/home/home.component';
 import {ServiciosComponent} from './components/servicios/servicios.component';
 import {LoginComponent} from './components/login/login.component';
 import {SiginComponent} from './components/sigin/sigin.component';
@@ -29,8 +28,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path:"home",
- component:HomeComponent
+    path:"books",
+ component:BookListComponent
   
   },
   {
@@ -48,7 +47,7 @@ const routes: Routes = [
   {
     path:'**',
     pathMatch:'full',
-    redirectTo: 'home'
+    redirectTo: 'books'
   }
 ];
 
