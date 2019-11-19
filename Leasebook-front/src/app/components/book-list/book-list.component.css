@@ -1,0 +1,7 @@
+.card-book{
+    cursor: pointer;
+}
+
+.card-book:hover {
+    border: 1px solid blue;
+}

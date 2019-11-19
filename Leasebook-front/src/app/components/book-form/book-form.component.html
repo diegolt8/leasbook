@@ -1,0 +1,37 @@
+<div class="col-lg-4 mx-auto">
+    <div class="card">
+        <div class="card-header mx-auto">
+            <h1>Publicar libro</h1>
+        </div>
+        <div class="card-body">
+            <form (submit)="register(name, description, synopsis, publication_date, autor, editorial, genre)">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nombre del libro" required #name>
+                </div>
+                <div class="form-group">
+                    <textarea rows="2" placeholder="Descripcion del libro" class="form-control" required #description></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Sinopsis del libro" required #synopsis>
+                </div>
+                <div class="form-group">
+                    <label for="">Fecha de publicación del libro</label>
+                    <input type="date" class="form-control" required #publication_date>
+                </div>
+                <input type="file" class="d-none" (change)="onSelectedPhoto($event)" #add_photoInput>
+                <img [src]="photoSelected || 'assets/no-image.png'" (click)="add_photoInput.click()" class="img-fluid"
+                    alt="">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Autor del libro" #autor required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Editorial del libro" #editorial required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="genero(s) literiario(s)" #genre required>
+                </div>
+                <button class="btn btn-primary btn-block">Crear publicación</button>
+            </form>
+        </div>
+    </div>
+</div>
