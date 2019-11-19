@@ -1,6 +1,6 @@
 
-   html,body{
-    background-image: url('http://getwallpapers.com/wallpaper/full/1/a/6/651967.jpg');
+html,body{
+    background-image: url('http://getwallpapers.com/wallpaper/full/3/a/9/271754.jpg');
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,17 +9,17 @@
     }
     
     .container{
-       padding: 5%;
+        padding: 5%;
     height: 100%;
     align-content: center;
     }
     
     .card{
-    height: 500;
+    height: 370px;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(177, 172, 172, 0.5) !important;
+    background-color: rgba(0,0,0,0.5) !important;
     }
     
     .social_icon span{
@@ -28,12 +28,20 @@
     color: #2e6ce7;
     }
     
+    .social_icon span:hover{
+    color: white;
+    cursor: pointer;
+    }
     
     .card-header h3{
     color: white;
     }
     
-    
+    .social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+    }
     
     .input-group-prepend span{
     width: 50px;
@@ -47,9 +55,17 @@
     box-shadow: 0 0 0 0 !important;
     
     }
-
-    .button{
-       text-align: center;
+    
+    .remember{
+    color: white;
+    }
+    
+    .remember input
+    {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
     }
     
     .login_btn{
@@ -63,3 +79,10 @@
     background-color: white;
     }
     
+    .links{
+    color: white;
+    }
+    
+    .links a{
+    margin-left: 4px;
+    }

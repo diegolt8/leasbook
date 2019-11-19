@@ -4,18 +4,28 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
 import { BookFormComponent } from './components/book-form/book-form.component';
 import { BookPreviewComponent } from './components/book-preview/book-preview.component';
 import { BookListComponent } from './components/book-list/book-list.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ServiciosComponent } from './components/servicios/servicios.component';
+import { LoginComponent } from './components/login/login.component';
+import { SiginComponent } from './components/sigin/sigin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
     BookFormComponent,
     BookPreviewComponent,
-    BookListComponent
+    BookListComponent,
+    FooterComponent,
+    HomeComponent,
+    HeaderComponent,
+    ServiciosComponent,
+    LoginComponent,
+    SiginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 
-   html,body{
-    background-image: url('http://getwallpapers.com/wallpaper/full/1/a/6/651967.jpg');
+html,body{
+    background-image: url('http://getwallpapers.com/wallpaper/full/5/e/4/652583.jpg');
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(177, 172, 172, 0.5) !important;
+    background-color: rgba(0,0,0,0.5) !important;
     }
     
     .social_icon span{
@@ -47,7 +47,7 @@
     box-shadow: 0 0 0 0 !important;
     
     }
-
+ 
     .button{
        text-align: center;
     }
@@ -62,4 +62,3 @@
     color: black;
     background-color: white;
     }
-    

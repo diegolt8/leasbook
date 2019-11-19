@@ -1,0 +1,50 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand" href="/src/app/components/home/home.component.html">
+      <img src="../assets/logo.png" width="60" height="60" class="d-inline-block align-top" alt="">
+      LEASEBOOK
+    </a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item routerLinkActive=active">
+              <a class="nav-link" routerLink="/home" style="color: white;">home</a>
+            </li>
+            <li class="nav-item routerLinkActive=active">
+                <a class="nav-link" routerLink="/servicios" style="color: white;">Servicios</a>
+              </li>
+            
+    
+        <li class="nav-item routerLinkActive=active">
+          <a class="nav-link" [routerLink]="['/Acerca']" style="color: white;">Acerca</a>
+        </li>
+        <li class="nav-item routerLinkActive=active">
+          <a class="nav-link" [routerLink]="['/books/new']" style="color: white;">publicar</a>
+        </li>
+        
+                
+        
+        <li class="nav-item routerLinkActive=active">
+    <a class="nav-link" routerLink="/loggeado"style="color: white;">loggeado</a>
+  </li>
+  
+  
+          
+        
+        </ul>
+        <ul class="navbar-nav ">
+        <form class="form-inline  ">
+          <li class="nav-item routerLinkActive=active">
+      <a class="nav-link" routerLink="/login" style="color: white;" >Log in</a>
+    </li>
+    <li class="nav-item routerLinkActive=active">
+        <a class="nav-link" routerLink="/registro"style="color: white;">Sing in</a>
+      </li>
+      <li class="nav-item routerLinkActive=active">
+          <a class="nav-link" routerLink="/mybooks"style="color: white;">Mis Libros</a>
+        </li>
+  </form>
+  </ul>
+    </div>
+  </nav>
+  
+  
