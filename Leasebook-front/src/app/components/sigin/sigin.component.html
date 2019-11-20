@@ -1,82 +1,62 @@
 <app-header></app-header>
 <html>
+
 <body>
   <div class="container">
-        <div class="d-flex justify-content-center h-100">
-            <div class="card">
-              <div class="card-header">
-                <h2 style="color: white; text-align: justify;">Formulario de Registro</h2>
-              </div>
-              <div class="card-body">  
-                <form>
-                    <div class="form-group">
-                        <label for="nombre" style="color: white;">Nombre:</label>
-                        <input ngModel="name" type="text" class="form-control" id="name" required>
-                     </div>
-                     <div class="form-group">
-                        <label for="apellido" style="color: white;">Apellido:</label>
-                        <input type="text" class="form-control" id="last_name" required>
-                      </div> 
-                      <div class="form-group">
-                          <label for="cedula" style="color: white;">Cedula:</label>
-                          <input type="number" class="form-control " id="nit" required>
-                        </div> 
-                        <div class="form-group">
-                            <label for="Direccion" style="color: white;">Direccion:</label>
-                            <input type="text" class="form-control" id="location" required>
-                          </div> 
-                      
-                          <div class="form-group">
-                              <label for="telefono" style="color: white;">Telefono:</label>
-                              <input type="number" class="form-control " id="phone" required>
-                            </div> 
-                            <div class="form-group" style="color: white;">
-                                <label >Fecha de Nacimiento</label>
-                                <input type="date" name="bday" min="1000-01-01"  max="3000-12-31" class="form-control"id="birthdate" required>
-                               </div>
-                      
-                            <div class="form-group">
-                                <label for="ciudad" style="color: white;">Ciudad:</label>
-                                <input type="text" class="form-control" id="city" required>
-                              </div>
-                              <div class="form-group" style="color: white;">
-                                  <label for="apodo">Apodo:</label>
-                                  <input type="text" class="form-control" id="nickname" required>
-                                </div> 
-                        
-                                                               
-                              <div class="form-group" style="color: white;">
-                                  <label for="correo">correo:</label>
-                                  <input type="email" class="form-control " id="email" required>
-                                </div> 
-                                <div class="form-group" style="color: white;">
-                                    <label for="psw">Contraseña:</label>
-                                    <input type="password" class="form-control" id="password" required>
-                                    <small id="passwordHelpInline" class="text-muted">
-                                        Debe tener entre 8 y 15 caracteres.
-                                      </small>
-                                  </div> 
-                                  <div class="form-group" style="color: white;">
-                                      <label for="correo">Repetir Contraseña:</label>
-                                      <input type="password" class="form-control" id="psw" required>
-                                    </div>   
-                                    <button type="submit" class="btn btn-primary btn-lg" id="btnRegistroUsuario">Registrarme</button>
-                                    <br>
-                                    <span style="text-align: center; ">
-                                      <p>
-                                        <a routerLink="/login" style="color: white;">¿ya tienes una cuenta?</a>
-                                      </p>
-                                    </span>
-                </form>
-              </div>
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+        <div class="card-header">
+          <h2 style="color: white; text-align: justify;" >Formulario de Registro</h2>
+        </div>
+        <div class="card-body">
+          <form (submit)="register(username, email, password, address, nit, city, phone, birth_date)">
+            <div class="form-group">
+              <label for="username" style="color: white;">Usuario:</label>
+              <input type="text" class="form-control" id="username" #username required>
             </div>
-</div>
+            <div class="form-group">
+              <label for="email" style="color: white;">Email:</label>
+              <input type="text" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="password" style="color: white;">Contraseña:</label>
+              <input type="password" class="form-control " id="password" #password required>
+            </div>
+            <div class="form-group">
+              <label for="address" style="color: white;">Direccion:</label>
+              <input type="text" class="form-control" id="address" #address required>
+            </div>
+
+            <div class="form-group">
+              <label for="nit" style="color: white;">Cedula:</label>
+              <input type="text" class="form-control " id="nit" #nit required>
+            </div>
+            <div class="form-group">
+              <label for="city" style="color: white;">Ciudad:</label>
+              <input type="text" class="form-control " id="city" #city required>
+            </div>
+            <div class="form-group">
+              <label for="phone" style="color: white;">Telefono:</label>
+              <input type="text" class="form-control " id="phone" #phone required>
+            </div>
+            <div class="form-group" style="color: white;">
+              <label>Fecha de Nacimiento</label>
+              <input type="date" name="birth_date" min="1000-01-01" max="3000-12-31" class="form-control" id="birth_date"
+               #birth_date required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" id="btnRegistroUsuario">Registrarme</button>
+            <br>
+            <span style="text-align: center; ">
+              <p>
+                <a routerLink="/login" style="color: white;">¿ya tienes una cuenta?</a>
+              </p>
+            </span>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
-  </body>
-  </html>
+</body>
 
-
-
-
-
+</html>
