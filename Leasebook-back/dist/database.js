@@ -4,7 +4,9 @@ const mongoose_1 = require("mongoose");
 async function startConnection() {
     await mongoose_1.connect('mongodb://localhost/leasebookDb', {
         useNewUrlParser: true,
-        useFindAndModify: false
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+        useCreateIndex: true
     });
     console.log('Database is connected');
 }
