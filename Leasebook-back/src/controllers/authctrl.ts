@@ -1,42 +1,55 @@
 import { Request, Response } from 'express'
-import User, { IUser } from '../models/User';
+
+import User, { IUser } from '../models/User'
+import { signupValidation, signinValidation } from '../libs/joi'
 import jwt from 'jsonwebtoken';
 
-const SECRET_KEY = "secret1234";
-
 export const signup = async (req: Request, res: Response) => {
-    const {username, email, password, address, nit, city, phone, birth_date} =  req.body
-    const user: IUser = new User({
-        username: username,
-        email: email,
-        password: password,
-        address: address,
-        nit: nit,
-        city: city,
-        phone: phone,
-        birth_date: birth_date
-    });
+    // Validation
+    const { error } = signupValidation(req.body);
+    if (error) return res.status(400).json(error.message);
 
-    user.password = await user.encryptPassword(user.password);
-    const saveUser = await user.save();
-    const token: string = jwt.sign({ _id: saveUser._id }, process.env.SECRET_KEY || 'token');
-    res.header("auth-token", token).json(saveUser);
+    // Email Validation
+    const emailExists = await User.findOne({ email: req.body.email });
+    if (emailExists) return res.status(400).json('Email already exists');
 
+    // Saving a new User
+    try {
+        const newUser: IUser = new User({
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password
+        });
+        newUser.password = await newUser.encrypPassword(newUser.password);
+        const savedUser = await newUser.save();
+
+        const token: string = jwt.sign({ _id: savedUser._id }, process.env['TOKEN_SECRET'] || '', {
+            expiresIn: 60 * 60 * 24
+        });
+        // res.header('auth-token', token).json(token);
+        res.header('auth-token', token).json(savedUser);
+    } catch (e) {
+        res.status(400).json(e);
+    }
 };
 
 export const signin = async (req: Request, res: Response) => {
+    const { error } = signinValidation(req.body);
+    if (error) return res.status(400).json(error.message);
     const user = await User.findOne({ email: req.body.email });
-    if (!user) return res.status(400).json('Email o contraseña incorrectos');
+    if (!user) return res.status(400).json('Email or Password is wrong');
+    const correctPassword = await user.validatePassword(req.body.password);
+    if (!correctPassword) return res.status(400).json('Invalid Password');
 
-    const correctPassword: boolean = await user.validatePassword(req.body.password);
-    if (!correctPassword) return res.status(400).json('Contraseña invalida');
-
-    const token: string = jwt.sign({ _id: user._id }, process.env.SECRET_KEY || 'token', {
-        expiresIn: 60 * 60 * 24
-    })
-    res.header('auth-token', token).json(user);
+    // Create a Token
+    const token: string = jwt.sign({ _id: user._id }, process.env['TOKEN_SECRET'] || '');
+    res.header('auth-token', token).json(token);
 };
 
-export const profile = (req: Request, res: Response) => {
-    res.send('profile');
-};
+/*export const profile = async (req: Request, res: Response) => {
+    const user = await User.findById(req.userId, { password: 0 });
+    if (!user) {
+        return res.status(404).json('No User found');
+    }
+    res.json(user);
+};*/

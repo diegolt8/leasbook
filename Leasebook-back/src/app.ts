@@ -1,10 +1,10 @@
-import express from 'express';
+import express, { Application } from 'express';
 import morgan from 'morgan';
 import indexRouter from './routes/index';
 import path from 'path';
 import authRoutes from './routes/auth';
 
-const app = express();
+const app: Application = express();
 
 //settings
 app.set('port', process.env.PORT || 3000);

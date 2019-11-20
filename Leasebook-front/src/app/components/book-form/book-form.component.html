@@ -50,20 +50,20 @@
               <div class="card-body">  
                 <form (submit)="register(name, description, synopsis, publication_date, autor, editorial, genre)">
                      <div class="form-group">
-                            <label for="nombre" style="color: rgb(112, 112, 112);">Nombre:</label>
-                        <input type="text" class="form-control" placeholder="Nombre del libro" required #name>
+                            <label for="nombre" style="color: white;">Nombre:</label>
+                        <input type="text" class="form-control" style="color: black;" placeholder="Nombre del libro" required #name>
                     </div>
                     <div class="form-group">
                         <label for="descripción"style="color: white;">Descripción:</label>
-                        <textarea rows="2" placeholder="Descripcion del libro" class="form-control" required #description></textarea>
+                        <textarea rows="2" placeholder="Descripcion del libro" style="color: black;" class="form-control" required #description></textarea>
                     </div> 
                     <div class="form-group">
                           <label for="Sinopsis"style="color: white;">Sinopsis:</label>
-                          <input type="text" class="form-control" placeholder="Sinopsis del libro" required #synopsis>
+                          <input type="text" class="form-control" style="color: black;" placeholder="Sinopsis del libro" required #synopsis>
                     </div> 
                     <div class="form-group">
                             <label style="color: white;">Fecha de Publicación</label>
-                            <input type="date" class="form-control" required #publication_date>
+                            <input type="date" class="form-control" style="color: black;" required #publication_date>
                    </div>
                     <div class="form-group">
                           <label for="exampleFormControlFile1"style="color: white;">Agregar Foto</label>
@@ -73,18 +73,18 @@
                     </div>
                     <div class="form-group">
                             <label for="Autor"style="color: white;">Autor:</label>
-                            <input type="text" class="form-control" placeholder="Autor del libro" #autor required>
+                            <input type="text" class="form-control" style="color: black;" placeholder="Autor del libro" #autor required>
                     </div> 
                     <div class="form-group">
                             <label for="Autor"style="color: white;">Editorial:</label>
-                            <input type="text" class="form-control" placeholder="Editorial del libro" #editorial required>
+                            <input type="text" class="form-control" style="color: black;" placeholder="Editorial del libro" #editorial required>
                     </div> 
 
 
                    
                     <div class="form-group ">
                             <label for="Autor"style="color: white;">Genero:</label>
-                            <input type="text" class="form-control" placeholder="genero(s) literiario(s)" #genre required>
+                            <input type="text" class="form-control" style="color: black;" placeholder="genero(s) literiario(s)" #genre required>
                     </div>
                  
                      <div class="button" >

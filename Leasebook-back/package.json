@@ -13,8 +13,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.2",
     "@types/fs-extra": "^8.0.1",
+    "@types/hapi__joi": "^15.0.4",
     "@types/jsonwebtoken": "^8.3.5",
     "@types/mongoose": "^5.5.32",
     "@types/morgan": "^1.7.37",
@@ -25,8 +28,8 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
-    "@types/bcryptjs": "^2.4.2",
     "bcryptjs": "^2.4.3",
+    "@hapi/joi": "^16.1.4",
     "connect-flash": "^0.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

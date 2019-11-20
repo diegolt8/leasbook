@@ -10,17 +10,11 @@ export class UserServiceService {
 
   constructor(private http: HttpClient) { }
 
-  register(username: string, email: string, password: string,
-    address: string, nit: string, city: string, phone: string, birth_date: Date) {
+  register(username: string, email: string, password: string) {
     const fd = new FormData();
     fd.append('username', username);
     fd.append('email', email);
     fd.append('password', password);
-    fd.append('address', address);
-    fd.append('nit', nit);
-    fd.append('city', city);
-    fd.append('phone', phone);
-    fd.append('birth_date', birth_date.toString());
     return this.http.post(this.URI + '/signup', fd);
   }
 }
