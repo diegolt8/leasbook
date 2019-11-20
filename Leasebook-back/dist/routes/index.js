@@ -15,3 +15,4 @@ router.route('/publication/:id')
     .delete(bookctrl_1.deleteBook)
     .put(bookctrl_1.updateBook);
 exports.default = router;
+//# sourceMappingURL=index.js.map

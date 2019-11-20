@@ -1,5 +1,5 @@
-import app from './app'
-import {startConnection} from './database'
+import app from './app';
+import { startConnection } from './database';
 
 async function main() {
     startConnection();

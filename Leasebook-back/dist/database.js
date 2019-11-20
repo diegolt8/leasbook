@@ -9,3 +9,4 @@ async function startConnection() {
     console.log('Database is connected');
 }
 exports.startConnection = startConnection;
+//# sourceMappingURL=database.js.map

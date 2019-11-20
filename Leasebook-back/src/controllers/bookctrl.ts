@@ -2,7 +2,6 @@ import {Request, Response} from 'express'
 import Book from '../models/Book'
 import path from 'path'
 import fs from 'fs-extra'
-import { toUnicode } from 'punycode';
 
 export async function getBooks(req: Request, res: Response): Promise<Response> {
     const book = await Book.find();

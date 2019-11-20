@@ -18,3 +18,4 @@ app.use('/api', index_1.default);
 //this folder for this application will be used to store public files
 app.use('/uploads', express_1.default.static(path_1.default.resolve('uploads')));
 exports.default = app;
+//# sourceMappingURL=app.js.map

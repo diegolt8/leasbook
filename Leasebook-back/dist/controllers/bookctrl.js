@@ -67,3 +67,4 @@ async function updateBook(req, res) {
     });
 }
 exports.updateBook = updateBook;
+//# sourceMappingURL=bookctrl.js.map

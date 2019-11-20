@@ -12,3 +12,4 @@ const schema = new mongoose_1.Schema({
     editorial: String
 });
 exports.default = mongoose_1.model('Book', schema);
+//# sourceMappingURL=Book.js.map
