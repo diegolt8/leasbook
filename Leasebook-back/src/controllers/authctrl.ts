@@ -5,6 +5,7 @@ import { signupValidation, signinValidation } from '../libs/joi'
 import jwt from 'jsonwebtoken';
 
 export const signup = async (req: Request, res: Response) => {
+
     // Validation
     const { error } = signupValidation(req.body);
     if (error) return res.status(400).json(error.message);
